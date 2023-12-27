@@ -2,6 +2,8 @@ export interface ExploreNFT {
   id: string;
   imgUrl: string;
   title: string;
+  url: string;
+  web: string;
 }
 
 export interface Insight {
@@ -21,32 +23,37 @@ export const exploreWorlds: ExploreNFT[] = [
     id: "nft-1",
     imgUrl: "/nft/jrny.jpeg",
     title: "Villagers of XOLO",
+    url: "https://opensea.io/collection/planet-xolo-villagers?search[collections][0]=planet-xolo-villagers",
+    web: "https://planetxolo.com/",
   },
   {
     id: "nft-2",
     imgUrl: "/nft/bayc.png",
     title: "Bored Ape Yacht Club",
+    url: "https://opensea.io/collection/boredapeyachtclub",
+    web: "https://boredapeyachtclub.com/#/",
   },
   {
     id: "nft-3",
     imgUrl: "/nft/mph.jpeg",
     title: "My Pet Hooligan",
+    url: "https://opensea.io/collection/mypethooligan",
+    web: "https://www.mypethooligangame.com/",
   },
   {
     id: "nft-5",
     imgUrl: "/nft/neotokyo.png",
     title: "Neo Tokyo Citizens",
+    url: "https://opensea.io/collection/neotokyo-citizens",
+    web: "https://neotokyo.codes/",
   },
   {
     id: "nft-4",
     imgUrl: "/nft/impostor.jpeg",
     title: "Impostors Genesis Aliens",
+    url: "https://opensea.io/collection/impostors-genesis-aliens",
+    web: "https://impostors.gg/",
   },
-  // {
-  //   id: "nft-5",
-  //   imgUrl: "/mutantApe2.png",
-  //   title: "Mutant Ape Yacht Club",
-  // },
 ];
 
 export const insights: Insight[] = [

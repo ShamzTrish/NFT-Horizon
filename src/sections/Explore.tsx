@@ -10,7 +10,7 @@ import { ExploreNFT, exploreWorlds } from '@/constants'
 import ExploreCard from '@/components/ExploreCard'
 
 const Explore: FC = () => {
-    const [active, setActive] = useState<string>('nft-2')
+    const [active, setActive] = useState<string>('nft-3')
 
     return <section className={`${styles.paddings}`} id='explore'>
         <motion.div
@@ -30,7 +30,7 @@ const Explore: FC = () => {
             />
             {/* maping through our nfts and displaying card for each */}
             <div className='mt-[35px] flex lg:flex-row flex-col min-h-[50vh] gap-5'>
-                {exploreWorlds.map((world: ExploreNFT, index) => (
+                {exploreWorlds.map((world: ExploreNFT, index,) => (
                     <ExploreCard
                         key={world.id}
                         {...world}

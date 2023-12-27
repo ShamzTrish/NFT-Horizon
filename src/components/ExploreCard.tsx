@@ -7,6 +7,7 @@ import styles from '@/styles';
 import { ExploreNFT } from '@/constants';
 import { cn } from '@/utils/utils';
 import Image from 'next/image';
+import { TbWorldWww } from "react-icons/tb";
 import { SiOpensea } from 'react-icons/si'
 
 
@@ -16,7 +17,7 @@ export interface ExploreCardProps extends ExploreNFT {
     handleClick: (id: string) => void
 }
 
-const ExploreCard: FC<ExploreCardProps> = ({ index, id, imgUrl, title, handleClick, active }) => {
+const ExploreCard: FC<ExploreCardProps> = ({ index, id, imgUrl, title, handleClick, active, url, web }) => {
     return <motion.div
         variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
         className={cn('relative flex items-center justify-center min-w-[130px] h-[500px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer', {
@@ -39,14 +40,29 @@ const ExploreCard: FC<ExploreCardProps> = ({ index, id, imgUrl, title, handleCli
             ) : (
                 // overlay card on each Nft picture
                 <div className="absolute bottom-0 p-5 flex justify-between w-full flex-row items-center bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
-                    <div className={`${styles.flexCenter} w-[40px] h-[40px] rounded-[24px] glassmorphism px-[5px]`}>
-                        <SiOpensea
-                            className="text-[30px] object-contain text-white"
-                        />
+                    {/* OpenSea/WWW Icon */}
+                    <div className='flex flex-row gap-2'>
+                        <div className={`${styles.flexCenter} w-[40px] h-[40px] rounded-[24px] glassmorphism px-[5px]`}>
+                            <SiOpensea
+                                onClick={(e: any) => {
+                                    e.stopPropagation(); // Stops event from bubbling up to parent elements
+                                    window.open(url, '_blank'); // Opens the URL in a new tab
+                                }}
+                                className="text-[30px] object-contain text-white"
+                            />
+                        </div>
+                        <div className={`${styles.flexCenter} w-[40px] h-[40px] rounded-[24px] glassmorphism px-[5px]`}>
+                            <TbWorldWww
+                                onClick={(e: any) => {
+                                    e.stopPropagation();
+                                    window.open(web, '_blank');
+                                }}
+                                className="text-[30px] object-contain text-white"
+                            />
+                        </div>
+
                     </div>
-                    {/* <p className="font-normal text-[15px] leading-[17px] text-white uppercase">
-                        Enter OpenSea
-                    </p> */}
+
                     <h2 className="font-semibold sm:text-[24px] text-[16px] text-white text-end">
                         {title}
                     </h2>
