@@ -76,10 +76,11 @@ const MintIntro: FC<MintIntroProps> = ({ }) => {
                 className={`flex-1 ${styles.flexCenter}`}
             >
 
-                <img
-                    src='/whatsnew/mint.png'
+                <Image
+                    src='/whatsNew/imposter1.png'
                     alt='getStarted'
                     className='w-[90%] h-[90%] object-contain'
+                    width={1000} height={1000}
                 />
             </motion.div>
         </motion.div>
