@@ -6,6 +6,7 @@ import { footerVariants } from '../utils/motion';
 
 import { FC } from 'react'
 import { socials } from '@/constants';
+import Image from 'next/image';
 
 interface FooterProps {
 
@@ -35,7 +36,7 @@ const Footer: FC<FooterProps> = ({ }) => {
 
                         <div className="flex gap-4">
                             {socials.map((social) => (
-                                <img
+                                <Image
                                     key={social.name}
                                     src={social.url}
                                     alt={social.name}
