@@ -20,7 +20,8 @@ const Intro: FC<IntroProps> = () => {
             variants={staggerContainer}
             initial='hidden'
             whileInView='show'
-            viewport={{ once: true, amount: 0.25 }}>
+            viewport={{ once: true, amount: 0.25 }}
+            className={`2xl:max-w-[1280px] flex flex-col justify-center items-center mx-auto`}>
 
             {/* BACKGROUND IMAGE */}
             <div className='absolute ml-[-100px] mt-[80px] flex max-w-[100%] h-[900px] md:h-[630px] overflow-hidden'>

@@ -29,7 +29,7 @@ const MintIntro: FC<MintIntroProps> = ({ }) => {
             >
                 <TypingText
                     title="| How to Start? |"
-                    className='text-center' />
+                    className='text-left' />
                 <TitleText
                     title='Get started with only few clicks'
                     className='text-[20px] md:text-[25px] text-center sm:text-left' />
@@ -80,7 +80,7 @@ const MintIntro: FC<MintIntroProps> = ({ }) => {
                     src='/whatsnew/mint.png'
                     alt='getStarted'
                     className='w-[90%] h-[90%] object-contain'
-                    width={100} height={100}
+                    width={1000} height={1000}
                 />
             </motion.div>
         </motion.div>

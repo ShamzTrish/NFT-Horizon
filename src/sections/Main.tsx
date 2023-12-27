@@ -52,7 +52,7 @@ const Main = ({ }) => {
                 className='relative w-full md:-mt-[20px] -mt-[12px]' >
                 <div className='absolute w-full h-[150px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]' />
                 <Image src='/mainPicture/nftverse.png' alt='cover' width={1000} height={1000}
-                    className='w-full sm:h-[390px] h-[300px] object-cover rounded-tl-[140px] z-10 relative' />
+                    className='w-full sm:h-[390px] 2xl:h-[500px] h-[300px] object-cover rounded-tl-[140px] z-10 relative' />
 
                 <a href='#explore'>
                     <div className='w-full flex justify-end sm:-mt-[90px] -mt-[50px] pr-[50px] relative z-10'>
@@ -63,7 +63,7 @@ const Main = ({ }) => {
             <motion.div
                 variants={slideIn('right', 'tween', 0.2, 1)}
                 className='relative md:-mt-[10px] mt-7 flex mr-[25px] md:mr-[50px]' >
-                <Link href={'/nft'} className='mt-[20px] customBtn'>Mint Trainig Ground Center</Link>
+                <Link href={'/nft'} className='mt-[20px] customBtn'>Minting Training Ground Center</Link>
             </motion.div>
         </motion.div >
     </section >

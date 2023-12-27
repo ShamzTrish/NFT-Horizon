@@ -22,7 +22,7 @@ const Insights: FC<InsightsProps> = ({ }) => {
                 viewport={{ once: true, amount: 0.25 }}
                 className={`${styles.innerWidth} mx-auto flex flex-col`}
             >
-                <TypingText title='| A recommended read for curious minds.' className='text-center' />
+                <TypingText title='| A recommended read for curious minds |' className='text-center' />
                 <TitleText title='Insights about NFTs' className='text-center' />
                 <div className='mt-[38px] flex flex-col gap-[20px]'>
                     {

@@ -9,7 +9,7 @@ import WhatsNew from "@/sections/MintIntro";
 
 export default function Home() {
   return (<>
-    <main className='bg-primary-black overflow-hidden'>
+    <main className='bg-primary-black overflow-hidden '>
       <div className='absolute max-w-[100vw] h-[60px] inset-4 gradient-01' />
       <Main />
       <div className="relative">

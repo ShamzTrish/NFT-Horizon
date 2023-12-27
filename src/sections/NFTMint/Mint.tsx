@@ -29,8 +29,22 @@ const Mint = ({ }) => {
     } = useClaimNFT(contract);
 
     const mintNFT = async () => {
-        const toastLoading = () => {
-            toast.loading('Mint in progress..', {
+
+        toast.loading('Mint in progress..', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
+
+
+        try {
+
+            toast.success('Your NFT has been minted!', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -40,34 +54,20 @@ const Mint = ({ }) => {
                 progress: undefined,
                 theme: "dark",
             });
-        }
 
-        try {
-            const toastSuccess = () => {
-                toast.success('Your NFT has been minted!', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                });
-            }
         } catch (error) {
-            const toastError = () => {
-                toast.error('Your NFT has been minted!', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                });
-            }
+
+            toast.error('Your NFT has been minted!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+
         }
     }
 
@@ -124,7 +124,9 @@ const Mint = ({ }) => {
             initial='hidden'
             whileInView='show'
             viewport={{ once: true, amount: 0.25 }}
-            className={`relative z-10`} id='mint'>
+            id='mint'
+            className={`2xl:max-w-[1280px] flex flex-col justify-center mx-auto relative z-10`}
+        >
             <div className='gradient-05 opacity-30 z-0' />
             {/* HEADER */}
             {/* line */}
@@ -250,9 +252,7 @@ const Mint = ({ }) => {
                         <span className='md:px-5 px-3'>MINT NFT <span className='font-bold'>(0.01 ETH)</span></span>
                     )}
                 </motion.button>
-                {/* <button onClick={toastSuccess}>NOTIFY</button>
-                <button onClick={toastLoading}>Loading</button>
-                <button onClick={toastError}>Error</button> */}
+
                 <ToastContainer
                     position="top-center"
                     autoClose={5000}
