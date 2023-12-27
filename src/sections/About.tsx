@@ -33,7 +33,7 @@ const About: FC<AboutProps> = ({ }) => {
                 viewport={{ once: true, amount: 0.25 }}
             >
                 {/* MAP IMAGE */}
-                <Image src="/map.png" alt="map" className='w-full h-[170%] md:h-[120% border-none object-cover md:border scale-[1.3] opacity-20 rounded-[200px]' />
+                <Image width={1000} height={1000} src="/map.png" alt="map" className='w-full h-[170%] md:h-[120% border-none object-cover md:border scale-[1.3] opacity-20 rounded-[200px]' />
 
                 <motion.p
                     variants={fadeIn('up', 'tween', 0.2, 1)}

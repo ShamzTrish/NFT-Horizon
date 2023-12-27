@@ -37,6 +37,8 @@ const Footer: FC<FooterProps> = ({ }) => {
                         <div className="flex gap-4">
                             {socials.map((social) => (
                                 <Image
+                                    height={1000}
+                                    width={1000}
                                     key={social.name}
                                     src={social.url}
                                     alt={social.name}
